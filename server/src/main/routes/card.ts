@@ -10,6 +10,7 @@ import { makeSignInUserController } from '../factories/signInUserController'
 import { makesignUpUserController } from '../factories/signUpUserController'
 
 import { makeAuthMiddleware } from '../factories/middlewares/middlewareAdapter'
+import { adaptRouteCookie } from '../adapters/expressRouterCookieAdapter'
 
 const routes = Router()
 
@@ -22,7 +23,7 @@ routes.put('/card/review', adaptMiddleware(makeAuthMiddleware()), adaptRoute(mak
 
 routes.post('/user/signUp', adaptRoute(makesignUpUserController()))
 
-routes.post('/user/login', adaptRoute(makeSignInUserController()))
+routes.post('/user/login', adaptRouteCookie(makeSignInUserController()))
 
 
 export default routes

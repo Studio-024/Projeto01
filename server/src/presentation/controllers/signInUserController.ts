@@ -1,7 +1,7 @@
 import { SignInUserService } from '@/data/services/signInUserService'
 import { IUserLogin } from '@/domain/entities/userLogin'
 import { IController } from '../contracts/controller'
-import { errorHandler, HttpRequest, HttpResponse, ok } from '../contracts/http'
+import { cookie, errorHandler, HttpRequest, HttpResponse, ok } from '../contracts/http'
 import { requiredParams } from '../helper/requireParams'
 
 export class SignInUserController implements IController {
@@ -19,12 +19,9 @@ export class SignInUserController implements IController {
             const user: IUserLogin = {
                 ...request.body
             }            
-            const response = {
-                statusCode: 200,
-                data: await this.signInUserService.signIn(user)
-            }
+            const token = await this.signInUserService.signIn(user)
             
-            return ok(response)
+            return cookie(token)
         } catch (error) {
             return errorHandler(error.response)
         }

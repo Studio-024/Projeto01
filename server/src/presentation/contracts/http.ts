@@ -1,6 +1,7 @@
 export type HttpResponse<T = any> = {
     statusCode: number
     data: T
+	cookie?: string
 }
 
 export type HttpRequest <T = any>= {
@@ -17,6 +18,12 @@ export const ok = (data: any): HttpResponse => ({
 export const noContent = (): HttpResponse => ({
 	statusCode: 200,
 	data: null
+})
+
+export const cookie = (cookie: string): HttpResponse => ({
+	statusCode: 200,
+	data: null,
+	cookie
 })
 
 export const unauthorized  = (data: string): HttpResponse => ({
