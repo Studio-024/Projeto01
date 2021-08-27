@@ -19,7 +19,7 @@
     margin-inline: auto;
     align-items: center;
     width: 28rem;
-    height: 16rem;
+    height: 14rem;
     font-family: 'Risque';
     font-size: 3.5rem;
     color: $input-color;
@@ -30,7 +30,7 @@
     flex-direction: column;
     width: 28rem;
     margin-inline: auto;
-    &_container_input{
+    &_form{
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -46,6 +46,7 @@
       color: $input-color;
       font-size: 1.1rem;
       box-shadow: inset 0px 4px 4px rgba(5, 27, 36, 0.25);
+      font-family: 'roboto';
       &::placeholder{
         color: $input-placeholder;
       }

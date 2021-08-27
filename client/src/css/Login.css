@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "Risque";
+  src: url("../assets/fonts/Risque-Regular.ttf"); }
+
+@font-face {
+  font-family: "Poly";
+  src: url("../assets/fonts/Poly-Regular.ttf"); }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto/Roboto-Regular.ttf"); }
+
+@font-face {
+  font-family: "Risque";
+  src: url("../assets/fonts/Risque-Regular.ttf"); }
+
+@font-face {
+  font-family: "Poly";
+  src: url("../assets/fonts/Poly-Regular.ttf"); }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto/Roboto-Regular.ttf"); }
+
+.registry #registry_background {
+  background-image: url("../assets/backgroundSecundary.png");
+  position: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1; }
+
+.registry_header, .login_header {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-inline: auto;
+  align-items: center;
+  width: 28rem;
+  height: 14rem;
+  font-family: 'Risque';
+  font-size: 3.5rem;
+  color: #71B6D9;
+  user-select: none; }
+
+.registry_main, .login_main {
+  display: flex;
+  flex-direction: column;
+  width: 28rem;
+  margin-inline: auto; }
+  .registry_main_form, .login_main_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .registry_main_input, .login_main_form_input {
+    margin: 3rem 0 0 0;
+    height: 2.5rem;
+    width: 16rem;
+    padding-inline: 1rem;
+    border-radius: 10px 10px 1px 1px;
+    border-bottom: 2px solid #266A8D;
+    background: rgba(40, 112, 148, 0.21);
+    color: #71B6D9;
+    font-size: 1.1rem;
+    box-shadow: inset 0px 4px 4px rgba(5, 27, 36, 0.25);
+    font-family: 'roboto'; }
+    .registry_main_input::placeholder, .login_main_form_input::placeholder {
+      color: rgba(40, 112, 148, 0.5); }
+    .registry_main_input:nth-of-type(3), .login_main_form_input:nth-of-type(3) {
+      margin-bottom: 5rem; }
+  .registry_main_submit, .login_main_form_submit {
+    background-color: #266A8D;
+    width: 18rem;
+    font-family: 'Poly';
+    font-size: 1.5rem; }
+
+@media screen and (max-width: 43rem) {
+  .registry_header, .login_header {
+    width: 18rem;
+    height: 8rem;
+    font-size: 3.5rem; }
+  .registry_main, .login_main {
+    width: 18rem; }
+    .registry_main_container_input {
+      display: flex; }
+    .registry_main_input, .login_main_form_input {
+      margin: calc(2rem + 5vh) 0 0 0;
+      height: 3rem;
+      width: 14rem;
+      border-radius: 12px 12px 1px 1px;
+      color: #71B6D9;
+      font-size: 1.2rem; }
+      .registry_main_input:nth-of-type(3), .login_main_form_input:nth-of-type(3) {
+        margin-bottom: calc(3rem + 5vh); }
+    .registry_main_submit, .login_main_form_submit {
+      width: 16rem;
+      font-size: 1.7rem; } }
+
+.login #login_background {
+  background-image: url("../assets/backgroundSecundary.png");
+  position: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1; }
+
+.login_main_form_submit {
+  margin-top: calc(3rem + 5vh); }
+
+.login_main #login_main_createAccont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 2rem auto 2rem auto;
+  width: 18rem;
+  height: 4rem;
+  font-size: 1.7rem;
+  color: #71B6D9;
+  font-family: 'roboto';
+  cursor: pointer; }
+
+@media screen and (max-width: 43rem) {
+  .login_header {
+    width: 18rem;
+    height: 8rem;
+    font-size: 3.5rem; }
+  .login_main {
+    width: 18rem; }
+    .login_main_form {
+      display: flex; }
+      .login_main_form_input {
+        margin: calc(2rem + 5vh) 0 0 0;
+        height: 3rem;
+        width: 14rem;
+        border-radius: 12px 12px 1px 1px;
+        color: #71B6D9;
+        font-size: 1.2rem; }
+      .login_main_form_submit {
+        margin-top: calc(3rem + 5vh);
+        width: 16rem;
+        font-size: 1.7rem; } }

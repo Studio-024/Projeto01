@@ -21,7 +21,7 @@ const Registry = () => {
       <div id='registry_background'/>
       <header className="registry_header">MEMORIZE</header>
       <main className="registry_main">
-        <form className='registry_main_container_input' >
+        <form className='registry_main_form' >
           <input type="name" className="registry_main_input" placeholder="Nome" 
             onChange={event => setName(event.target.value)} 
           />

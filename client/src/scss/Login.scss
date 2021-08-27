@@ -1,0 +1,71 @@
+@import './vars.scss';
+@import './fonts.scss';
+@import './Registry.scss';
+.login{
+  #login_background{
+    background-image: url('../assets/backgroundSecundary.png');
+    position: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  &_header{
+    @extend .registry_header;
+  }
+  &_main{
+    @extend .registry_main;
+    &_form{
+      @extend .registry_main_form;
+      &_input{
+        @extend .registry_main_input;
+      }
+      &_submit{
+        margin-top:  calc(3rem + 5vh);
+        @extend .registry_main_submit;
+      }
+    }
+    #login_main_createAccont{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin: 2rem auto 2rem auto;
+      width: 18rem;
+      height: 4rem;
+      font-size: $font-size-great;
+      color: $input-color;
+      font-family: 'roboto';
+      cursor: pointer;
+    }
+
+  }
+}
+@media screen and (max-width: 43rem) {
+  .login{
+    &_header{
+      width: 18rem;
+      height: 8rem;
+      font-size: 3.5rem;
+    }
+    &_main{
+      width: 18rem;
+      &_form{ 
+        display: flex;
+        &_input{
+          margin: calc(2rem + 5vh) 0 0 0;
+          height: 3rem;
+          width: 14rem;
+          border-radius: 12px 12px 1px 1px;
+          color: $input-color;
+          font-size: 1.2rem;
+        }
+        &_submit{
+          margin-top: calc(3rem + 5vh);
+          width: 16rem;
+          font-size: 1.7rem;
+        }
+      }  
+    }
+  }
+}
