@@ -17,11 +17,6 @@ button {
   border-radius: 10px;
   cursor: pointer; }
 
-.container {
-  height: 100%;
-  width: 100%;
-  background: #266A8D; }
-
 main {
   display: flex;
   flex-direction: column; }

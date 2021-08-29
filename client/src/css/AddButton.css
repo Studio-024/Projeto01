@@ -8,3 +8,15 @@
   font-size: 2.5rem;
   color: #266A8D;
   background-color: #051B24; }
+
+@media screen and (max-width: 750px) {
+  .crud_button {
+    right: 1rem; } }
+
+@media screen and (max-width: 450px) {
+  .crud_button {
+    position: static;
+    margin: 1rem auto 0.5rem auto;
+    width: calc(70%);
+    height: 2.5rem;
+    border-radius: 0.5rem; } }

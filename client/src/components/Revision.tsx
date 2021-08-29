@@ -43,6 +43,7 @@ const Revision = ({dataCards}: Props) => {
     return (
         <>
         <div className='card'>
+            <div id="card_background"/>
             <h1 className='card_title'>Title</h1>
             
             <p className='card_quest'>{

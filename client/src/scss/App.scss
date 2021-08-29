@@ -1,6 +1,5 @@
 @import 'vars.scss';
 
-
 *{
   outline: none;
   margin: 0;
@@ -22,13 +21,6 @@ button{
   border-radius: 10px;
   cursor:pointer;
 }
-
-.container{
-  height: 100%;
-  width: 100%;
-  background: $background-primary;
-}
-
 main{
   display: flex; 
   flex-direction: column;
